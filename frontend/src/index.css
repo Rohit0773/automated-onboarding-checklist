@@ -1,0 +1,99 @@
+* { box-sizing: border-box; }
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #182230;
+  background: #f4f7fb;
+}
+
+body { margin: 0; }
+
+.app { min-height: 100vh; }
+
+.hero {
+  background: #172033;
+  color: white;
+  padding: 42px max(24px, calc((100vw - 1180px) / 2));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.eyebrow { font-size: 12px; letter-spacing: 2px; opacity: .7; font-weight: 700; }
+.hero h1 { margin: 7px 0 5px; font-size: 42px; }
+.hero p { margin: 0; color: #cbd4e3; }
+.hero-badge { border: 1px solid #44516a; border-radius: 999px; padding: 10px 14px; font-size: 13px; }
+
+.container { max-width: 1180px; margin: 28px auto; padding: 0 20px; }
+.grid { display: grid; grid-template-columns: 390px 1fr; gap: 20px; }
+
+.card {
+  background: white;
+  border: 1px solid #e4e9f0;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(24, 34, 48, .05);
+}
+
+.section-title { display: flex; justify-content: space-between; gap: 15px; align-items: center; margin-bottom: 22px; }
+.section-title > div { display: flex; align-items: center; gap: 12px; }
+.section-title h2 { font-size: 19px; margin: 0; }
+.step { font-size: 11px; font-weight: 800; background: #edf2ff; color: #4359b8; padding: 7px 8px; border-radius: 8px; }
+.muted { color: #778397; font-size: 13px; }
+
+label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 15px; }
+input, select {
+  width: 100%; margin-top: 7px; padding: 12px 13px;
+  border: 1px solid #dbe1e9; border-radius: 10px; font: inherit;
+  background: white; color: #182230;
+}
+input:focus, select:focus { outline: 2px solid #cbd5ff; border-color: #7384df; }
+
+.primary {
+  width: 100%; border: 0; border-radius: 11px; padding: 13px;
+  background: #4359b8; color: white; font-weight: 800; cursor: pointer; margin-top: 5px;
+}
+.primary:disabled { opacity: .6; cursor: wait; }
+
+.message { margin-top: 15px; background: #eef8f2; color: #237344; border-radius: 10px; padding: 10px 12px; font-size: 13px; }
+
+.progress, .department { background: #eef8f2; color: #237344; border-radius: 999px; padding: 7px 10px; font-size: 12px; font-weight: 700; }
+.employee-summary {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #f7f9fc; padding: 14px; border-radius: 12px; margin-bottom: 15px;
+}
+.employee-summary strong, .employee-summary span { display: block; }
+.employee-summary span:not(.department) { color: #7b8798; font-size: 12px; margin-top: 3px; }
+
+.task { display: flex; gap: 13px; padding: 14px 0; border-bottom: 1px solid #edf0f4; }
+.task:last-child { border-bottom: 0; }
+.task-number { width: 30px; height: 30px; border-radius: 50%; background: #eef2ff; color: #4359b8; display: grid; place-items: center; font-size: 12px; font-weight: 800; flex: 0 0 auto; }
+.task-content { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.task-content strong { font-size: 14px; }
+.task-content select { width: 125px; margin: 0; padding: 8px; font-size: 12px; }
+.task.done strong { text-decoration: line-through; color: #82909f; }
+
+.history-card { margin-top: 20px; }
+.history-list { display: grid; gap: 9px; }
+.history-item {
+  width: 100%; background: #fafbfc; border: 1px solid #e9edf2; border-radius: 12px;
+  padding: 14px; text-align: left; display: flex; justify-content: space-between;
+  cursor: pointer; color: inherit;
+}
+.history-item:hover { border-color: #bcc6ef; background: #f7f8ff; }
+.history-item strong, .history-item span { display: block; }
+.history-item span { font-size: 12px; color: #778397; margin-top: 3px; }
+.history-right { text-align: right; }
+
+.empty { text-align: center; padding: 70px 35px; color: #7b8798; }
+.empty-icon { width: 55px; height: 55px; border-radius: 50%; display: grid; place-items: center; margin: auto; background: #edf2ff; color: #4359b8; font-size: 24px; }
+.empty h3 { color: #273247; margin-bottom: 6px; }
+
+footer { text-align: center; color: #8994a5; font-size: 12px; padding: 20px; }
+
+@media (max-width: 850px) {
+  .hero { padding: 30px 20px; }
+  .hero h1 { font-size: 32px; }
+  .grid { grid-template-columns: 1fr; }
+}
